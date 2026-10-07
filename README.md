@@ -3,8 +3,9 @@
 **Do you have an idea, concept, or prototype for solving part of an alignment problem?** Sketch it here,
 run it, and see exactly how far it is from a result that counts.
 
-The [ai-safety-claims](https://github.com/aintelope/ai-safety-claims) registry tracks a few hard, dated research questions, each with a frozen
-bar a published method has to meet. Prediction markets forecast whether anyone will meet it. Two questions are open for contributions now:
+The [ai-safety-claims](https://github.com/aintelope/ai-safety-claims) registry tracks dated research questions, each with a frozen
+bar a published method has to meet. Catalog contracts for Markets 1–13 and 15–18 are frozen as versions
+(not a resolution source until an independent host tags a snapshot). Inspect scaffolds exist for two of them:
 
 - **[Market 1](https://github.com/aintelope/ai-safety-claims/blob/main/market-contracts/market-01/contract-v2.yaml): where does control reside?**
   Given an AI system you have never seen, can your method name the components that jointly control its
@@ -23,9 +24,9 @@ What you get from building toward one of them here:
 **Try it in 15 minutes, no API key:** copy an example, run it on Inspect's mock model, and read the gap list ([Workflow](#workflow)). Working on a different sub-problem? Open an issue on the [registry](https://github.com/aintelope/ai-safety-claims/issues) proposing a question and its bar.
 
 > Status: scaffold. Market 4 has an Inspect scaffold; Market 1 has a systems.yaml scaffold and one
-> sketch. Everything under `contrib/example-*` is fictional and runs on Inspect's mock model or a
-> scripted toy. The registry is not yet a resolution source: no market resolves on it until an
-> independent host owns it.
+> sketch. Other frozen catalog contracts have no Inspect template yet (`workbench new` still defaults
+> to Market 4). Everything under `contrib/example-*` is fictional and runs on Inspect's mock model or a
+> scripted toy. The registry is not yet a resolution source.
 
 ## How it fits together
 
