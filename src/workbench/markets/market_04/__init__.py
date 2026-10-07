@@ -44,6 +44,9 @@ def cases(contribution):
             case.update({f: ep[f] for f in GENUINE_FIELDS})
         else:
             case["sham_type"] = ep["sham_type"]
+        for extra in ("source", "examinee_model"):
+            if ep.get(extra):
+                case[extra] = ep[extra]
         out.append(case)
     if not out:
         raise SystemExit("episodes.yaml has no episodes")
