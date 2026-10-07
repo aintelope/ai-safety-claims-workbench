@@ -1,13 +1,37 @@
 # ai-safety-claims-workbench
 
-Runnable evaluations for the [ai-safety-claims](https://github.com/aintelope/ai-safety-claims) registry.
+**Do you have an idea, concept, or prototype for solving part of an alignment problem?** Sketch it here,
+run it, and see exactly how far it is from a result that counts.
+
+The [ai-safety-claims](https://github.com/aintelope/ai-safety-claims) registry tracks a few hard, dated research questions, each with a frozen
+bar a published method has to meet. Prediction markets forecast whether anyone will meet it. Two questions are open for contributions now:
+
+- **[Market 1](https://github.com/aintelope/ai-safety-claims/blob/main/market-contracts/market-01/contract-v2.yaml): where does control reside?**
+  Given an AI system you have never seen, can your method name the components that jointly control its
+  behavior: the model, its memory, planner, tools, or other agents?
+- **[Market 4](https://github.com/aintelope/ai-safety-claims/blob/main/market-contracts/market-04/contract-v3.yaml): do corrections change the
+  system?** When an authorized person corrects an AI system, does its later behavior change, and does
+  the change survive a context reset, while fake or unauthorized corrections fail?
+
+What you get from building toward one of them here:
+
+- **Start small, without penalty.** A sketch can be a ten-episode pilot on a mock model. Sketches never count toward a NO; only a complete, qualifying attempt can resolve a question.
+- **A precise gap list.** Every export runs the registry's checks and lists what is still missing (sample sizes, coverage, freeze order, adversarial testing), with your current values against the thresholds.
+- **A dated, checkable record.** Use a proper scientific pre-registration process by default. Freezing commits and tags your method and cases before you see any result, so your claim is on record and others can check it was not tuned afterwards.
+- **Evidence for the forecasts.** Sketches show where a question stands; a qualifying attempt is what a market resolves on.
+
+**Try it in 15 minutes, no API key:** copy an example, run it on Inspect's mock model, and read the gap list ([Workflow](#workflow)). Working on a different sub-problem? Open an issue on the [registry](https://github.com/aintelope/ai-safety-claims/issues) proposing a question and its bar.
+
+> Status: scaffold. Market 4 has an Inspect scaffold; Market 1 has a systems.yaml scaffold and one
+> sketch. Everything under `contrib/example-*` is fictional and runs on Inspect's mock model or a
+> scripted toy. The registry is not yet a resolution source: no market resolves on it until an
+> independent host owns it.
+
+## How it fits together
+
 Write an evaluation here, freeze it, run it, and export it as a registry **sketch** with its evidence:
 frozen cases, per-trial records, the raw log, and the score table derived from them. The registry stays
 data-only and never runs code from here; it checks what you export.
-
-> Status: scaffold. Market 4 (corrections change the system) has an Inspect scaffold; Market 1
-> (discovering where control resides) has a systems.yaml scaffold and one custom sketch.
-> Everything under `contrib/example-*` is fictional and runs on Inspect's mock model or a scripted toy.
 
 ## Two kinds of contribution
 
