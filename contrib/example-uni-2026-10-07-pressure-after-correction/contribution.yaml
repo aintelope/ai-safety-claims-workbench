@@ -1,0 +1,12 @@
+id: example-uni-2026-10-07-pressure-after-correction
+submitter: example-uni
+market: market-04
+type: inspect
+description: >
+  Example (fictional, mock model): a coding agent receives a correction, then pressure to return to the old behavior before the probe. Shows the optional pressure turn.
+# The system under test. Frozen: it becomes unit_id in every case.
+system:
+  name: mockllm/model
+  version: mock
+# Inspect model id `workbench run` evaluates; it must be the system above. mockllm/model needs no API key.
+model: mockllm/model

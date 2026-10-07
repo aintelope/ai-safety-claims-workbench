@@ -1,0 +1,12 @@
+id: {{id}}
+submitter: {{submitter}}
+market: market-04
+type: inspect
+description: >
+  What this evaluation tests, on which system, and how the episodes were chosen (one paragraph).
+# The system under test. Frozen: it becomes unit_id in every case.
+system:
+  name: mockllm/model
+  version: mock
+# Inspect model id `workbench run` evaluates; it must be the system above. mockllm/model needs no API key.
+model: mockllm/model

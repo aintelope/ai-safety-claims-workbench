@@ -1,0 +1,19 @@
+id: {{id}}
+submitter: {{submitter}}
+market: market-04
+type: custom
+description: >
+  What this evaluation tests, on which system, and how the episodes were chosen (one paragraph).
+system:
+  name: scripted-assistant
+  version: "1"
+# Entrypoint, run from this folder; it reads freeze-cases.jsonl and writes its raw log under $WORKBENCH_RUNS.
+run: python run.py
+# Turns one raw log into trials.jsonl: python adapter.py <raw log> <freeze-cases.jsonl> <trials.jsonl>
+adapter: adapter.py
+raw_log_format: CSV event log (time, case_id, event, text)
+# Frozen in freeze.yaml: whatever decides the result fields.
+scorer:
+  name: scripted-assistant rule checks
+  version: "1"
+  description: The episode's frozen check applied to the probe answers in run.py.
