@@ -6,7 +6,7 @@ frozen cases, per-trial records, the raw log, and the score table derived from t
 data-only and never runs code from here; it checks what you export.
 
 > Status: scaffold. Market 4 (corrections change the system) has an Inspect scaffold; Market 1
-> (discovering where control resides) has a systems.yaml scaffold.
+> (discovering where control resides) has a systems.yaml scaffold and one custom sketch.
 > Everything under `contrib/example-*` is fictional and runs on Inspect's mock model or a scripted toy.
 
 ## Two kinds of contribution
@@ -23,7 +23,9 @@ sketch it becomes.
   `example-uni-2026-10-07-pressure-after-correction`.
 - **Custom (self-contained).** Any entrypoint (`run` in `contribution.yaml`: a script, an agent, a
   container) that reads the frozen cases and writes a raw log in its own format, plus `adapter`, a script
-  that turns one raw log into `trials.jsonl`. Example: `example-lab-2026-10-07-scripted-assistant`.
+  that turns one raw log into `trials.jsonl`. Examples: `example-lab-2026-10-07-scripted-assistant`
+  (Market 4) and `zarncke-2026-10-07-lab-sim-intervention-uad` (Market 1: the book's lab-simulation UAD on
+  its own ecology scenarios; needs the book repo checked out next to this one).
 
 ## Workflow
 
