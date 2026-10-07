@@ -52,6 +52,8 @@ def test_example_exports(trees, cid):
         if not (lab_sim_root() / "lab_sim").is_dir():
             pytest.skip("needs the book repo's lab simulation (set LAB_SIM_ROOT)")
         env = {**env, "LAB_SIM_ROOT": str(lab_sim_root())}
+    if (REPO / "contrib" / cid / "freeze.yaml").exists():
+        pytest.skip("already frozen; scratch git has no freeze commit")
     for step in (["freeze", cid, "--commit"], ["run", cid], ["export", cid]):
         r = workbench(wb, env, *step)
         assert r.returncode == 0, (step, r.stdout, r.stderr)
