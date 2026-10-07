@@ -21,7 +21,7 @@ dietz:
   source_concat_sha256: 37cc8679677ac74f9c09b320711bfd12aa659b5bea9496dadd2c9002c5a6bfe0
 run: python run.py
 adapter: adapter.py
-raw_log_format: Dietz wrap log (JSON lines: header plus one published examination per frozen case)
+raw_log_format: "Dietz wrap log (JSON lines: header plus one published examination per frozen case)"
 scorer:
   name: no later-behavior probe
   version: "1"
