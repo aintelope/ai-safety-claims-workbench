@@ -22,20 +22,20 @@ cases:
 - id: serial_pipeline_no_unit-s9101
   label_positive: false
   concealed: false
-  mechanism: ''
+  mechanism: serial_pipeline_no_joint_unit
 - id: serial_pipeline_no_unit-s9102
   label_positive: false
   concealed: false
-  mechanism: ''
+  mechanism: serial_pipeline_no_joint_unit
 - id: serial_pipeline_no_unit-s9103
   label_positive: false
   concealed: false
-  mechanism: ''
+  mechanism: serial_pipeline_no_joint_unit
 - id: serial_pipeline_no_unit-s9104
   label_positive: false
   concealed: false
-  mechanism: ''
+  mechanism: serial_pipeline_no_joint_unit
 - id: serial_pipeline_no_unit-s9105
   label_positive: false
   concealed: false
-  mechanism: ''
+  mechanism: serial_pipeline_no_joint_unit
