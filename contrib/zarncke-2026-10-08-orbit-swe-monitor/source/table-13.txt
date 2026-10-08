@@ -1,0 +1,14 @@
+Orbit paper Table 13 (SWE-Bench multi-issue, identical task instances).
+Source: Hagag, Anderson, Chakraborty, Schroeder de Witt, arXiv:2609.33102v1 (2026-09-27).
+Excerpt: attack success rate (ASR) on collusion and compromised-agent arms; benign task completion omitted here.
+
+Defense          | Compromised ASR | Collusion ASR (95% CI)
+-----------------|-----------------|---------------------------
+None             | 0.720           | 0.300 [0.191, 0.438]
+System prompt    | 0.640           | 0.400 [0.276, 0.538]
+Myopic monitor   | 0.120           | 0.300 [0.191, 0.438]
+Guardian         | 0.120           | 0.340 [0.224, 0.478]
+Dual-LLM         | 0.480           | 0.240 [0.143, 0.374]
+
+Paper headline: monitor and guardian cut compromised-agent ASR by 60 points; collusion ASR unchanged
+for myopic monitor (0 vs 0 pp change) and guardian (+4 pp, within noise).

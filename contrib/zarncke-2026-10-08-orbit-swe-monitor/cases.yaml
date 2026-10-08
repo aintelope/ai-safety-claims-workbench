@@ -1,0 +1,12 @@
+# Two collusion cells from Orbit paper Table 13 (SWE-Bench multi-issue). Wrap only; not access certificates.
+cases:
+  - id: swe-mi-monitor-collusion
+    family: hidden-communication
+    incomplete: true
+    post_freeze: false
+    multi_machine: false
+  - id: swe-mi-guardian-collusion
+    family: hidden-communication
+    incomplete: true
+    post_freeze: false
+    multi_machine: false
