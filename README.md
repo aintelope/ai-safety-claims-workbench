@@ -5,7 +5,7 @@ run it, and see exactly how far it is from a result that counts.
 
 The [ai-safety-claims](https://github.com/aintelope/ai-safety-claims) registry tracks dated research questions, each with a frozen
 bar a published method has to meet. Catalog contracts for Markets 1–13 and 15–18 are frozen as versions
-(not a resolution source until an independent host tags a snapshot). Workbench scaffolds exist for Markets 1, 4, and 8:
+(not a resolution source until an independent host tags a snapshot). Workbench scaffolds exist for Markets 1, 4, 8, 11, and 12:
 
 - **[Market 1](https://github.com/aintelope/ai-safety-claims/blob/main/market-contracts/market-01/contract-v2.yaml): where does control reside?**
   Given an AI system you have never seen, can your method name the components that jointly control its
@@ -15,6 +15,10 @@ bar a published method has to meet. Catalog contracts for Markets 1–13 and 15�
   the change survive a context reset, while fake or unauthorized corrections fail?
 - **[Market 8](https://github.com/aintelope/ai-safety-claims/blob/main/market-contracts/market-08/contract-v2.yaml): can an audit detect missing control routes?**
   Custom wraps only (no Inspect template); see `contrib/zarncke-2026-10-08-orbit-swe-monitor`.
+- **[Market 11](https://github.com/aintelope/ai-safety-claims/blob/main/market-contracts/market-11/contract-v1.yaml): coordination without communication?**
+  Custom wraps; see `contrib/zarncke-2026-10-08-lab-sim-s7-hidden-coord`.
+- **[Market 12](https://github.com/aintelope/ai-safety-claims/blob/main/market-contracts/market-12/contract-v1.yaml): do safety proxies track the real thing?**
+  Custom wraps; see `contrib/zarncke-2026-10-08-et4-a0-proxy`.
 
 What you get from building toward one of them here:
 
@@ -25,8 +29,8 @@ What you get from building toward one of them here:
 
 **Try it in 15 minutes, no API key:** copy an example, run it on Inspect's mock model, and read the gap list ([Workflow](#workflow)). Working on a different sub-problem? Open an issue on the [registry](https://github.com/aintelope/ai-safety-claims/issues) proposing a question and its bar.
 
-> Status: scaffold. Market 4 has an Inspect scaffold; Market 1 has a systems.yaml scaffold; Market 8 has
-> a cases.yaml scaffold for custom wraps. Other frozen catalog contracts have no template yet (`workbench new`
+> Status: scaffold. Market 4 has an Inspect scaffold; Market 1 has a systems.yaml scaffold; Markets 8, 11,
+> and 12 have cases.yaml scaffolds for custom wraps. Other frozen catalog contracts have no template yet (`workbench new`
 > still defaults to Market 4). Everything under `contrib/example-*` is fictional and runs on Inspect's mock
 > model or a scripted toy. The registry is not yet a resolution source.
 
@@ -52,7 +56,9 @@ sketch it becomes.
   container) that reads the frozen cases and writes a raw log in its own format, plus `adapter`, a script
   that turns one raw log into `trials.jsonl`. Examples: `example-lab-2026-10-07-scripted-assistant`
   (Market 4), `zarncke-2026-10-07-lab-sim-intervention-uad` (Market 1: lab-simulation UAD; needs the book
-  repo), and `zarncke-2026-10-08-orbit-swe-monitor` (Market 8: published Orbit Table 13, no model calls).
+  repo), `zarncke-2026-10-08-orbit-swe-monitor` (Market 8: published Orbit Table 13, no model calls),
+  `zarncke-2026-10-08-lab-sim-s7-hidden-coord` (Market 11: S7 blind battery excerpt), and
+  `zarncke-2026-10-08-et4-a0-proxy` (Market 12: ET-4 A0 proxy inversion).
 
 ## Workflow
 

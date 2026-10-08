@@ -1,0 +1,557 @@
+{
+  "backend": "subprocess",
+  "battery_seeds": [
+    9101,
+    9102,
+    9103,
+    9104,
+    9105
+  ],
+  "code_version": "lab-sim-0.9.3",
+  "rows": [
+    {
+      "blind_silent_labels": {
+        "eng1-eng2": "workflow",
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "eng2-rev1": "workflow",
+        "eng2-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.6666666666666666,
+          "exact": false,
+          "isolated": true,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "eng1",
+              "eng2"
+            ],
+            [
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 1.0
+        },
+        "heuristic": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "intervention": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        }
+      },
+      "scenario": "shared_slot",
+      "seed": 9101,
+      "true_pair": [
+        "eng1",
+        "eng2"
+      ]
+    },
+    {
+      "blind_silent_labels": {
+        "eng1-eng2": "workflow",
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "eng2-rev1": "workflow",
+        "eng2-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.6666666666666666,
+          "exact": false,
+          "isolated": true,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "eng1",
+              "eng2"
+            ],
+            [
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 1.0
+        },
+        "heuristic": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "intervention": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        }
+      },
+      "scenario": "shared_slot",
+      "seed": 9102,
+      "true_pair": [
+        "eng1",
+        "eng2"
+      ]
+    },
+    {
+      "blind_silent_labels": {
+        "eng1-eng2": "workflow",
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "eng2-rev1": "workflow",
+        "eng2-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.6666666666666666,
+          "exact": false,
+          "isolated": true,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "eng1",
+              "eng2"
+            ],
+            [
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 1.0
+        },
+        "heuristic": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "intervention": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        }
+      },
+      "scenario": "shared_slot",
+      "seed": 9103,
+      "true_pair": [
+        "eng1",
+        "eng2"
+      ]
+    },
+    {
+      "blind_silent_labels": {
+        "eng1-eng2": "workflow",
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "eng2-rev1": "workflow",
+        "eng2-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.6666666666666666,
+          "exact": false,
+          "isolated": true,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "eng1",
+              "eng2"
+            ],
+            [
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 1.0
+        },
+        "heuristic": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "intervention": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        }
+      },
+      "scenario": "shared_slot",
+      "seed": 9104,
+      "true_pair": [
+        "eng1",
+        "eng2"
+      ]
+    },
+    {
+      "blind_silent_labels": {
+        "eng1-eng2": "workflow",
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "eng2-rev1": "workflow",
+        "eng2-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.6666666666666666,
+          "exact": false,
+          "isolated": true,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "eng1",
+              "eng2"
+            ],
+            [
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 1.0
+        },
+        "heuristic": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        },
+        "intervention": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 0.0
+        }
+      },
+      "scenario": "shared_slot",
+      "seed": 9105,
+      "true_pair": [
+        "eng1",
+        "eng2"
+      ]
+    },
+    {
+      "blind_silent_labels": {
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "eng1",
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 0.5
+        },
+        "heuristic": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "intervention": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        }
+      },
+      "scenario": "serial_pipeline_no_unit",
+      "seed": 9101,
+      "true_pair": null
+    },
+    {
+      "blind_silent_labels": {
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "eng1",
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 0.5
+        },
+        "heuristic": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "intervention": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        }
+      },
+      "scenario": "serial_pipeline_no_unit",
+      "seed": 9102,
+      "true_pair": null
+    },
+    {
+      "blind_silent_labels": {
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "eng1",
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 0.5
+        },
+        "heuristic": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "intervention": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        }
+      },
+      "scenario": "serial_pipeline_no_unit",
+      "seed": 9103,
+      "true_pair": null
+    },
+    {
+      "blind_silent_labels": {
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "eng1",
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 0.5
+        },
+        "heuristic": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "intervention": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        }
+      },
+      "scenario": "serial_pipeline_no_unit",
+      "seed": 9104,
+      "true_pair": null
+    },
+    {
+      "blind_silent_labels": {
+        "eng1-rev1": "workflow",
+        "eng1-rm1": "workflow",
+        "rev1-rm1": "workflow"
+      },
+      "detectors": {
+        "blind": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "cmi_deep": {
+          "adjusted_rand": 0.0,
+          "exact": false,
+          "isolated": false,
+          "merged": true,
+          "nonsingleton_clusters": [
+            [
+              "rev1",
+              "rm1"
+            ]
+          ],
+          "uad_score": 0.8333333333333334
+        },
+        "heuristic": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        },
+        "intervention": {
+          "adjusted_rand": 1.0,
+          "exact": true,
+          "isolated": false,
+          "merged": false,
+          "nonsingleton_clusters": [],
+          "uad_score": 1.0
+        }
+      },
+      "scenario": "serial_pipeline_no_unit",
+      "seed": 9105,
+      "true_pair": null
+    }
+  ]
+}
