@@ -65,6 +65,7 @@ sketch it becomes.
   that turns one raw log into `trials.jsonl`. Examples: `example-lab-2026-10-07-scripted-assistant`
   (Market 4), `zarncke-2026-10-07-lab-sim-intervention-uad` (Market 1: lab-simulation UAD; needs the book
   repo), `zarncke-2026-10-08-orbit-swe-monitor` (Market 8: published Orbit Table 13, no model calls),
+  `zarncke-2026-10-08-ciris-c2-access` (Market 8: C2 tool-scout access fixtures, TSA backtest),
   `zarncke-2026-10-08-lab-sim-s7-hidden-coord` (Market 11: S7 blind battery excerpt), and
   `zarncke-2026-10-08-et4-a0-proxy` (Market 12: ET-4 A0 proxy inversion).
 

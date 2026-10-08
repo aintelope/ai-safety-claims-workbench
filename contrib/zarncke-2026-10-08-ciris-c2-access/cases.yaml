@@ -1,0 +1,17 @@
+# C2 tool-scout dual-timeline fixtures (TSA backtest W-1 / W-15). Wrap only; not a qualifying audit method.
+cases:
+  - id: c2-v1-actuation-route
+    family: hidden-actuation
+    incomplete: true
+    post_freeze: false
+    multi_machine: false
+  - id: c2-v1-state-route
+    family: hidden-state
+    incomplete: true
+    post_freeze: false
+    multi_machine: false
+  - id: c2-v2-stack-null
+    family: hidden-actuation
+    incomplete: true
+    post_freeze: false
+    multi_machine: false
