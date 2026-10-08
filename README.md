@@ -3,9 +3,17 @@
 **Do you have an idea, concept, or prototype for solving part of an alignment problem?** Sketch it here,
 run it, and see exactly how far it is from a result that counts.
 
-The [ai-safety-claims](https://github.com/aintelope/ai-safety-claims) registry tracks dated research questions, each with a frozen
-bar a published method has to meet. Catalog contracts for Markets 1–13 and 15–18 are frozen as versions
-(not a resolution source until an independent host tags a snapshot). Workbench scaffolds exist for Markets 1, 4, 8, 11, and 12:
+The [ai-safety-claims](https://github.com/aintelope/ai-safety-claims) registry holds frozen **market
+contracts** for catalog Markets 1–13 and 15–18 ([full contract table](https://github.com/aintelope/ai-safety-claims#where-the-contracts-come-from)).
+Each states the bar a published method must meet by its evidence cutoff. The registry is not yet a
+resolution source until an independent host tags `snapshot-0`. Market 14 and draft Markets 19–21 are
+outside this catalog.
+
+This workbench exports registry **sketches** for any frozen catalog contract. **Workbench scaffolds**
+(case lists and validators wired in `src/workbench/markets/`) exist for five markets today; the rest use
+`workbench new --market market-NN --type custom` against the contract YAML in your registry checkout:
+
+**Scaffolded markets (examples in `contrib/`):**
 
 - **[Market 1](https://github.com/aintelope/ai-safety-claims/blob/main/market-contracts/market-01/contract-v2.yaml): where does control reside?**
   Given an AI system you have never seen, can your method name the components that jointly control its
@@ -20,14 +28,14 @@ bar a published method has to meet. Catalog contracts for Markets 1–13 and 15�
 - **[Market 12](https://github.com/aintelope/ai-safety-claims/blob/main/market-contracts/market-12/contract-v1.yaml): do safety proxies track the real thing?**
   Custom wraps; see `contrib/zarncke-2026-10-08-et4-a0-proxy`.
 
-What you get from building toward one of them here:
+What you get from building toward any catalog market here:
 
 - **Start small, without penalty.** A sketch can be a ten-episode pilot on a mock model. Sketches never count toward a NO; only a complete, qualifying attempt can resolve a question.
 - **A precise gap list.** Every export runs the registry's checks and lists what is still missing (sample sizes, coverage, freeze order, adversarial testing), with your current values against the thresholds.
 - **A dated, checkable record.** Use a proper scientific pre-registration process by default. Freezing commits and tags your method and cases before you see any result, so your claim is on record and others can check it was not tuned afterwards.
 - **Evidence for the forecasts.** Sketches show where a question stands; a qualifying attempt is what a market resolves on.
 
-**Try it in 15 minutes, no API key:** copy an example, run it on Inspect's mock model, and read the gap list ([Workflow](#workflow)). Working on a different sub-problem? Open an issue on the [registry](https://github.com/aintelope/ai-safety-claims/issues) proposing a question and its bar.
+**Try it in 15 minutes, no API key:** copy a Market 4 example, run it on Inspect's mock model, and read the gap list ([Workflow](#workflow)). For another catalog contract, pick it from the [registry table](https://github.com/aintelope/ai-safety-claims#where-the-contracts-come-from) and use `--type custom`, or open a [registry issue](https://github.com/aintelope/ai-safety-claims/issues) if the contract needs a change.
 
 > Status: scaffold. Market 4 has an Inspect scaffold; Market 1 has a systems.yaml scaffold; Markets 8, 11,
 > and 12 have cases.yaml scaffolds for custom wraps. Other frozen catalog contracts have no template yet (`workbench new`
@@ -59,6 +67,16 @@ sketch it becomes.
   repo), `zarncke-2026-10-08-orbit-swe-monitor` (Market 8: published Orbit Table 13, no model calls),
   `zarncke-2026-10-08-lab-sim-s7-hidden-coord` (Market 11: S7 blind battery excerpt), and
   `zarncke-2026-10-08-et4-a0-proxy` (Market 12: ET-4 A0 proxy inversion).
+
+### External sources (wraps)
+
+Many custom contributions **wrap published work** instead of calling a model. Two patterns both work; pick by size and who must reconstruct the run.
+
+**Self-contained (default for small sketches).** Pin upstream in `contribution.yaml` (`repo`, `commit`, optional `source_sha256`) and vendor the bytes the wrap reads under `source/` (or build them in `run.py` from a pinned excerpt). `run` writes a raw log; `export` copies that log into the registry sketch. The validator never fetches GitHub — it checks the exported `raw-log/`, `trials.jsonl`, and score table. Offline replay and CI stay simple; Dietz gold JSON, Orbit table excerpts, and ET-4/S7 JSON slices use this pattern.
+
+**External URL + content hash (preferred when logs are large).** Keep only the pin in the contribution: stable URL or `git` commit + paths, plus SHA-256 (or a manifest hash) of the artifact the adapter scores. `run` may fetch at run time; **`export` must still ship whatever the registry needs to verify** — typically a raw log derived from that artifact, with the hash recorded in `attempt.yaml` / `contribution.yaml` and echoed in the log header. Do not rely on “re-run our fetch script” as the only evidence unless that script and pin are part of the frozen method. For qualifying attempts, `freezeEvidence` in the registry should name the public source and hash.
+
+Sketches may stay fully self-contained even when a qualifying attempt would use URL + hash only; moving from sketch to submit is a good time to drop vendored blobs if they are huge.
 
 ## Workflow
 
@@ -93,7 +111,7 @@ qualifying attempt (sample sizes, adversarial route, publication).
 
 ```text
 src/workbench/            CLI (new, freeze, run, export), git checks, registry calls
-src/workbench/markets/    one scaffold per market: cases from episodes.yaml, Inspect task pieces
+src/workbench/markets/    case/Inspect scaffolds (Markets 1, 4, 8, 11, 12 today)
 templates/<market>/       what `workbench new` copies: inspect/ (default) and custom/
 contrib/                  contributions, one folder each
 tests/                    end to end against a scratch copy of the registry
